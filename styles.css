@@ -17,7 +17,8 @@ h4 {
   line-height: 1;
 }
 
-p {
+p,
+figure {
   margin: 0;
 }
 
@@ -109,4 +110,38 @@ main {
   font-size: 1.5rem;
   text-decoration: none;
   box-shadow: 0.25rem 0.25rem 0 yellow;
+}
+
+.about {
+  display: grid;
+  grid-row-gap: 1.5rem;
+  background-color: hsl(200, 20%, 96%);
+}
+
+.about__paragraph {
+  max-width: 40rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.about__skills {
+  display: flex;
+  justify-content: center;
+}
+
+.about__skill + .about__skill {
+  margin-left: calc(2rem + 4vw);
+}
+
+.about__icon {
+  border-radius: 50%;
+  padding: calc(1rem + 1vw);
+  background-color: yellow;
+}
+
+.about__caption {
+  margin-top: 0.75rem;
+  font-weight: 900;
+  font-size: 1.5rem;
 }
