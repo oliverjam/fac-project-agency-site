@@ -142,22 +142,17 @@ section {
   display: grid;
   grid-row-gap: 1.5rem;
   background-color: hsl(200, 20%, 96%);
+  text-align: center;
 }
 
 .about__paragraph {
   max-width: 40rem;
   margin: 0 auto;
   font-size: 1.5rem;
-  text-align: center;
-}
-
-.about__skills {
-  display: flex;
-  justify-content: center;
 }
 
 .about__skill + .about__skill {
-  margin-left: calc(2rem + 4vw);
+  margin-top: 2rem;
 }
 
 .about__icon {
@@ -172,6 +167,18 @@ section {
   font-size: 1.5rem;
 }
 
+@media (min-width: 40em) {
+  .about__skills {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about__skill + .about__skill {
+    margin-top: 0;
+    margin-left: calc(2rem + 4vw);
+  }
+}
+
 .team {
   max-width: 60rem;
   margin: 0 auto;
@@ -179,20 +186,21 @@ section {
   padding: 0;
 }
 
-.team__figure {
-  display: flex;
-  align-items: center;
-}
-
-.team__caption {
-  flex: 1;
-  padding: 2rem;
-  text-align: right;
-  font-size: 2rem;
+.team__item + .team__item {
+  margin-top: 4rem;
 }
 
 .team__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 1rem;
   box-shadow: 0.5rem 0.5rem 0 yellow;
+}
+
+.team__caption {
+  font-size: 2rem;
 }
 
 /* every other caption gets aligned left */
@@ -204,6 +212,19 @@ section {
 .team__item:nth-child(2n) .team__image {
   order: -1;
   box-shadow: 0.5rem 0.5rem 0 blue;
+}
+
+@media (min-width: 40em) {
+  .team__figure {
+    display: flex;
+    align-items: center;
+  }
+
+  .team__caption {
+    flex: 1;
+    padding: 2rem;
+    text-align: right;
+  }
 }
 
 .contact {
@@ -225,9 +246,8 @@ section {
 }
 
 .form__row {
-  margin-top: 0.75rem;
   display: grid;
-  grid-template-columns: 1fr auto;
+  margin-top: 0.75rem;
   border: 0.125rem solid;
 }
 
@@ -253,7 +273,7 @@ section {
 }
 
 .form__button {
-  border-left: 0.125rem solid;
+  border-top: 0.125rem solid;
   padding: 0.75rem 1rem;
   font-weight: 900;
   background-color: yellow;
@@ -267,4 +287,15 @@ section {
 .form__button::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+@media (min-width: 40em) {
+  .form__row {
+    grid-template-columns: 1fr auto;
+  }
+
+  .form__button {
+    border-top: 0;
+    border-left: 0.125rem solid;
+  }
 }
