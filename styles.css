@@ -163,3 +163,37 @@ section {
   font-weight: 900;
   font-size: 1.5rem;
 }
+
+.team {
+  max-width: 60rem;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.team__figure {
+  display: flex;
+  align-items: center;
+}
+
+.team__caption {
+  flex: 1;
+  padding: 2rem;
+  text-align: right;
+  font-size: 2rem;
+}
+
+.team__image {
+  box-shadow: 0.5rem 0.5rem 0 yellow;
+}
+
+/* every other caption gets aligned left */
+.team__item:nth-child(2n) .team__caption {
+  text-align: left;
+}
+
+/* every other image gets swapped with the caption and a different colour shadow */
+.team__item:nth-child(2n) .team__image {
+  order: -1;
+  box-shadow: 0.5rem 0.5rem 0 blue;
+}
