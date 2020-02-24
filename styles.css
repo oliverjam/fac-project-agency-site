@@ -118,6 +118,7 @@ section {
   align-content: center;
   justify-content: center;
   justify-items: center;
+  text-align: center;
   background-image: url("./bg-pattern.svg");
 }
 
