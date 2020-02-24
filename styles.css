@@ -26,6 +26,14 @@ figure {
   margin: 0;
 }
 
+label,
+input,
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+}
+
 /* snippet to hide element visually but allow assistive tech to access
 ** https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html#hiding-content-visually
 */
@@ -196,4 +204,67 @@ section {
 .team__item:nth-child(2n) .team__image {
   order: -1;
   box-shadow: 0.5rem 0.5rem 0 blue;
+}
+
+.contact {
+  background-color: hsl(200, 20%, 96%);
+}
+
+.form {
+  max-width: 36rem;
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+.form__label {
+  font-weight: 600;
+}
+
+.form__help {
+  font-size: 1rem;
+}
+
+.form__row {
+  margin-top: 0.75rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border: 0.125rem solid;
+}
+
+.form__input {
+  padding: 0.75rem;
+  background-color: white;
+}
+
+.form__input:focus {
+  outline: 0.125rem solid blue;
+  z-index: 10; /* puts outline above the button's border */
+}
+
+/* Firefox puts a red shadow around required inputs before they're event touched */
+.form__input:invalid {
+  box-shadow: none;
+}
+
+/* default placeholder is too low contrast */
+.form__input::placeholder {
+  color: hsl(200, 15%, 45%);
+  opacity: 1;
+}
+
+.form__button {
+  border-left: 0.125rem solid;
+  padding: 0.75rem 1rem;
+  font-weight: 900;
+  background-color: yellow;
+}
+
+.form__button:focus {
+  outline: 0.125rem solid blue;
+}
+
+/* remove annoying dotted inner line in Firefox */
+.form__button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
