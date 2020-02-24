@@ -8,6 +8,19 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 900;
+  line-height: 1;
+}
+
+p {
+  margin: 0;
+}
+
 /* snippet to hide element visually but allow assistive tech to access
 ** https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html#hiding-content-visually
 */
@@ -62,4 +75,38 @@ body {
 .header__link:focus {
   outline: 0.25rem solid blue;
   outline-offset: 0.25rem;
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.intro {
+  display: grid;
+  grid-row-gap: 1.5rem;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.intro__heading {
+  font-size: 3rem;
+}
+
+.intro__paragraph {
+  font-size: 1.25rem;
+}
+
+.intro__button {
+  display: block;
+  padding: 1rem 2rem;
+  background: blue;
+  color: white;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0.25rem 0.25rem 0 yellow;
 }
