@@ -111,12 +111,14 @@ section {
 }
 
 .intro {
+  min-height: 80vh;
   display: grid;
   grid-row-gap: 1.5rem;
   align-items: center;
   align-content: center;
   justify-content: center;
   justify-items: center;
+  background-image: url("./bg-pattern.svg");
 }
 
 .intro__heading {
