@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -36,16 +40,21 @@ figure {
 }
 
 .header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
   font-weight: 900;
+  background-color: white;
 }
 
 .header__logo {
   display: flex;
   align-items: center;
+  color: inherit;
+  text-decoration: none;
 }
 
 .header__logo-text {
@@ -64,12 +73,12 @@ figure {
 
 .header__link {
   color: inherit;
-  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-thickness: 2px;
 }
 
 .header__link:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-line: underline;
   text-decoration-color: blue;
 }
 
@@ -78,10 +87,19 @@ figure {
   outline-offset: 0.25rem;
 }
 
-main {
+.header__link--active {
+  text-decoration-line: underline;
+  text-decoration-color: black;
+}
+
+/* main {
   max-width: 60rem;
   margin: 0 auto;
-  padding: 1.5rem;
+} */
+
+section {
+  scroll-margin-top: 7rem;
+  padding: 12rem 1.5rem;
 }
 
 .intro {
